@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} nums
+            * @param {number} k
+            * @return {number}
+            */
+            
+            var nums  = [1, 1, 1, 1, 1];
+            var k  =  0;
+            var findPairs = function(nums, k) {
+                var l =nums.length;
+                var n = {};
+                var c = 0;
+                if(k < 0 ) {
+                    return 0;
+                }
+                for(var i = 0; i < l; ++i) {
+                    if(n[nums[i]] !== undefined) {
+                      ++n[nums[i]];  
+                    } else {
+                        n[nums[i]] = 0;
+                    }   
+                }
+                if(k == 0) {
+                    for(var j in n) {
+                        if(n[parseInt(j)] > 0) {
+                            ++c;
+                        }
+                    }
+                    return c;
+                }
+                for(var j in n) {
+                    if(n[parseInt(j) + k] !== undefined) {
+                        ++c;
+                    }
+                }
+                return c;
+            };
+            alert(findPairs(nums, k));
+        </script>
+    </body>
+</html>
