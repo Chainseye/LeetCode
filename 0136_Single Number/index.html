@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} nums
+            * @return {number}
+            */
+            var arr = [1];
+            var singleNumber = function(nums) {
+                var l = nums.length;
+                var n = {};
+                if(l == 1) {
+                    return nums[0];
+                }
+                for(var i = 0; i < l; ++i) {
+                    if(n[nums[i]] !== undefined) {
+                        delete n[nums[i]];
+                    } else {
+                        n[nums[i]] = nums[i];
+                    }
+                }
+                for(var j in n) {
+                    return n[j];
+                }
+            };
+            alert(singleNumber(arr));
+        </script>
+    </body>
+</html>
