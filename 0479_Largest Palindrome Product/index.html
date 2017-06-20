@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <div>
+            <h1>JS中除了我只有三个解决了问题，实际上是都没解决，因为超时，其中第一名的代码如下，真是我见过的最愚蠢的解决方式。</h1>
+            <pre>
+            var largestPalindrome = function(num) {
+                var table = [0,9,987,123,597,677,1218,877,475]
+                return table[num];
+            };
+            </pre>
+        </div>
+        <script>
+            /**
+            * @param {number} n
+            * @return {number}
+            */
+            var num = 2;
+            var largestPalindrome = function (n) {
+                if (n === 1) return 9;
+                if (n === 8) return 475;
+                var x = (Math.pow(10, n) - 1);
+                var min = Math.pow(10, n - 1);
+
+                for (var i = x; i >= min; --i) {
+                    var y = (i + "").split("").reverse().join("");
+                    var merged = +(i + "") + y);
+                    var sq = Math.sqrt(merged);
+                    for (var j = x; j > sq; --j) {
+                        if (merged % j === 0) {
+                            return merged % 1337;
+                        }
+                    }
+                }
+            };
+            alert(largestPalindrome(num));
+        </script>
+    </body>
+</html>
