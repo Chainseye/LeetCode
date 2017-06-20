@@ -3,22 +3,23 @@
     <body>  
         <script>
             /**
-            * @param {number} x
-            * @return {number}
+            * @param {number[]} nums
+            * @param {number} target
+            * @return {number[]}
             */
-            var number = 231;
-            var reverse = function(x) {
-                if (x<0) return -reverse(-x);
-                if (x===0) return 0;
-                var r = 0;
-                while(x>0){
-                    r = r*10+ x%10;
-                    x = (x/10)>>0;
+            var arr  = [2, 9, 13];
+            var end  =  22;
+            var twoSum = function(nums, target) {
+                var l= nums.length;
+                var n = {}
+                for(var i = 0; i < l; ++i) {
+                    if (n[target - nums[i]] !== undefined){
+                        return [n[target-nums[i]], i];
+                    }
+                    n[nums[i]] = i
                 }
-                if (Math.abs(r)> 2147483647) return 0;
-                return r;
             };
-            alert(reverse(number));
+            alert(twoSum(arr, end));
         </script>
     </body>
 </html>
