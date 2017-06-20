@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} nums
+            * @param {number} target
+            * @return {number[]}
+            */
+            var arr  = [2, 9, 13];
+            var end  =  22;
+            var twoSum = function(nums, target) {
+                var l= nums.length;
+                var n = {}
+                for(var i = 0; i < l; ++i) {
+                    if (n[target - nums[i]] !== undefined){
+                        return [n[target-nums[i]], i];
+                    }
+                    n[nums[i]] = i
+                }
+            };
+            alert(twoSum(arr, end));
+        </script>
+    </body>
+</html>
