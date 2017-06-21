@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} nums
+            * @param {number} k
+            * @return {void} Do not return anything, modify nums in-place instead.
+            */
+            var nums = [1, 2];
+            var k = 1;
+            var rotate = function(nums, k) {
+    if(k) {
+        var l = nums.length;
+        nums = nums.concat(nums).slice(l-k, 2*l -k );
+    }
+                console.log(nums);
+            };
+            alert(rotate(nums, k));
+        </script>
+    </body>
+</html>
