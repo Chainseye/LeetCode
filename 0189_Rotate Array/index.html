@@ -10,11 +10,15 @@
             var nums = [1, 2];
             var k = 1;
             var rotate = function(nums, k) {
-    if(k) {
-        var l = nums.length;
-        nums = nums.concat(nums).slice(l-k, 2*l -k );
-    }
-                console.log(nums);
+                var l = nums.length;
+                var a = [];
+                k %= l;
+                if(k !== 0 || k !==l ) {
+                    a = nums.concat(nums).slice(l-k, 2*l -k );
+                }
+                for(var i = 0; i < l; ++i) {
+                    nums[i] = a[i];
+                }
             };
             alert(rotate(nums, k));
         </script>

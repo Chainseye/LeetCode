@@ -3,28 +3,36 @@
     <body>  
         <script>
             /**
-            * @param {number[]} nums
-            * @return {number}
+            * Definition for isBadVersion()
+            * 
+            * @param {integer} version number
+            * @return {boolean} whether the version is bad
+            * isBadVersion = function(version) {
+            *     ...
+            * };
             */
-            var arr = [1];
-            var singleNumber = function(nums) {
-                var l = nums.length;
-                var n = {};
-                if(l == 1) {
-                    return nums[0];
-                }
-                for(var i = 0; i < l; ++i) {
-                    if(n[nums[i]] !== undefined) {
-                        delete n[nums[i]];
-                    } else {
-                        n[nums[i]] = nums[i];
+
+            /**
+            * @param {function} isBadVersion()
+            * @return {function}
+            */
+            var solution = function(isBadVersion) {
+                /**
+                * @param {integer} n Total versions
+                * @return {integer} The first bad version
+                */
+                return function(n) {
+                    var l = 0, r = n;
+                    while (l < r) {
+                        var m = l + (r - l) / 2|0;
+                        if (isBadVersion(m))
+                            r = m;
+                        else
+                            l = m + 1;
                     }
-                }
-                for(var j in n) {
-                    return n[j];
-                }
+                    return l;
+                };
             };
-            alert(singleNumber(arr));
         </script>
     </body>
 </html>

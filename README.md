@@ -8,3 +8,5 @@
 | 0136          | Single Number               | 105ms            | 77.46%           | 20170619 | ^= search                |
 | 0479          | Largest Palindrome Product  | 92ms             | 66.67%           | 20170620 | So foolish in JS         |
 | 0007          | Reverse Integer             | 145ms            | 86.78%           | 20170620 | >>   ==>   Math.floor    |
+| 0189          | Rotate Array                | 122ms            | 94.93%           | 20170621 | %=  .concat()  .slice()  |
+| 0278          | First Bad Version           | 89ms             | 94.81%           | 20170622 | binary search            |
