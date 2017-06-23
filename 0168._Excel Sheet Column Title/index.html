@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} n
+            * @return {string}
+            */
+            var nums = 26;
+            var convertToTitle = function(n) {
+                var r = "";
+                while(n) {
+                    r = String.fromCharCode(64 + (n%26||26)) + r;
+                    if(n%26) {
+                        n = (n/26)|0;
+                    } else {
+                        n = ((n/26)|0) - 1;
+                    }            
+                }
+                return r;
+            };
+            alert(convertToTitle(nums));
+        </script>
+    </body>
+</html>
