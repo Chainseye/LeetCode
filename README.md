@@ -11,4 +11,5 @@
 | 0189          | Rotate Array                | 122ms                 | 94.93%                | 20170621 | %=  .concat()  .slice()  | Yes            |
 | 0278          | First Bad Version           | 89ms                  | 94.81%                | 20170622 | binary search            | Yes            |
 | 0168          | Excel Sheet Column Title    | 88ms                  | 95.74%                | 20170623 | String.fromCharCode(65)  | Yes            |
-| 0125          | Valid Palindrome            | 125ms                 | 98.91%                | 20170623 | string[] is ok in JS     | Not All        |
+| 0125          | Valid Palindrome            | 125ms                 | 98.91%                | 20170624 | string[] is ok in JS     | Not All        |
+| 0204          | Count Primes                | 249ms                 | 85.45%                | 20170624 | how to get primes        | N0             |

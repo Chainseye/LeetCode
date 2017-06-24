@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} n
+            * @return {number}
+            */
+            var number = 200;
+            var countPrimes = function(n) {
+                var a = [];
+                if(n >= 2){
+                    a.fill(false);
+                    a[0] = true;
+                    a[1] = true;
+                } else {
+                    return 0
+                }
+                for(var i=2; i*i<n; ++i) {  
+                    if(!a[i]) {  
+                        for(var j=i; i*j<n; ++j) {  
+                            a[i*j] = true;  
+                        }  
+                    }  
+                }  
+                var c=0;  
+                
+                for(var m=2; m<n; ++m) {  
+                    if(a[m] !== true) ++c;  
+                }  
+                return c;  
+            };
+            alert(countPrimes(number));
+        </script>
+    </body>
+</html>
