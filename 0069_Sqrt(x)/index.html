@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} x
+            * @return {number}
+            */
+            var nums = 65
+            var mySqrt = function(x) {
+                if (x === 0) return 0;
+                var r = 1, p = 0;
+                while (r != p) {
+                    p = r;
+                    r = (r + x / r) / 2;
+                }
+                return r>>0;
+            };
+            alert(mySqrt(num));
+        </script>
+    </body>
+</html>
