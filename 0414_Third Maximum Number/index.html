@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} nums
+            * @return {number}
+            */
+            var number = [1,2];
+            var thirdMax = function(nums) {
+                var b = {};
+                var c = 0;
+                nums = nums.sort(function(a,b) {
+                    return b-a;
+                });
+                for(var i = 0; i < nums.length; ++i) {
+                    if(b[c] !== nums[i]) {
+                        ++c;
+                    }
+                    if(c == 3) {
+                        return nums[i];
+                    }
+                    b[c] = nums[i];
+                }
+                return b[1];
+            }
+            alert(thirdMax(number))
+        </script>
+    </body>
+</html>
