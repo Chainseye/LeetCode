@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {string} s
+            * @return {boolean}
+            */
+            var str = "1e4";
+            var isNumber = function(s) {
+                if(s == " ") return false;
+                return !isNaN(s);
+            };
+            alert(isNumber(str));
+        </script>
+    </body>
+</html>
