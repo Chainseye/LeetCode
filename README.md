@@ -17,3 +17,4 @@
 | 0414   | Third Maximum Number        | 108ms         | 75.68%          | 20170627 | sort(retutn b-a)               | Yes           |    Easy    |   🙂   |
 | 0028   | Implement strStr()          | 98ms          | 100%            | 20170628 | insteresting ? indexOf()       | Yes           |    Easy    |   🤔   |
 | 0065   | Valid Number                | 129ms         | 98.80%          | 20170628 | insteresting ? isNaN()         | Yes           |    Hard    |   🤔   |
+| 0155   | Min Stack                   | 119ms         | 84.56%          | 20170630 | stack                          | No            |    Easy    |   😃   |

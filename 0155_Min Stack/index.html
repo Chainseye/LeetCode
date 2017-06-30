@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * initialize your data structure here.
+            */
+            var MinStack = function() {
+                this.st = [];
+                this.stMin = [];
+            };
+
+            /** 
+            * @param {number} x
+            * @return {void}
+            */
+            MinStack.prototype.push = function(x) {
+                this.st.push(x);
+                if (this.stMin.length > 0) {
+                    var min = this.stMin[this.stMin.length - 1];
+                    if (x <= min) this.stMin.push(x);
+                }
+                else {
+                    this.stMin.push(x);
+                }
+            };
+
+            /**
+            * @return {void}
+            */
+            MinStack.prototype.pop = function() {
+                if (this.st.length > 0) {
+                    var num = this.st.pop();
+                    var min = this.stMin[this.stMin.length - 1];
+                    if (num == min) this.stMin.pop();
+                }
+            };
+
+            /**
+            * @return {number}
+            */
+            MinStack.prototype.top = function() {
+                if (this.st.length > 0) {
+                    return this.st[this.st.length - 1];
+                }
+                return null;
+            };
+
+            /**
+            * @return {number}
+            */
+            MinStack.prototype.getMin = function() {
+                if (this.stMin.length > 0) {
+                    var min = this.stMin[this.stMin.length - 1];
+                    return min;
+                } 
+                return null;
+            };
+
+            /** 
+            * Your MinStack object will be instantiated and called as such:
+            * var obj = Object.create(MinStack).createNew()
+            * obj.push(x)
+            * obj.pop()
+            * var param_3 = obj.top()
+            * var param_4 = obj.getMin()
+            */
+        </script>
+    </body>
+</html>
