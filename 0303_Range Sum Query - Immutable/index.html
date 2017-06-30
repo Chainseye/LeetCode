@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} nums
+            */
+            var NumArray = function(nums) {
+                var l = nums.length;
+                this.r = new Array(l);
+                for(var i=0; i<l; ++i) {
+                    if(i === 0) {
+                        this.r[i] = nums[i];
+                    } else {
+                        this.r[i] = this.r[i-1] + nums[i];
+                    }
+                }
+            };
+
+            /** 
+            * @param {number} i 
+            * @param {number} j
+            * @return {number}
+            */
+            NumArray.prototype.sumRange = function(i, j) {
+                if(i===0) return this.r[j];
+                else return this.r[j] - this.r[i-1];
+            };
+
+            /** 
+            * Your NumArray object will be instantiated and called as such:
+            * var obj = Object.create(NumArray).createNew(nums)
+            * var param_1 = obj.sumRange(i,j)
+            */
+        </script>
+    </body>
+</html>

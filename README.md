@@ -18,3 +18,4 @@
 | 0028   | Implement strStr()          | 98ms          | 100%            | 20170628 | insteresting ? indexOf()       | Yes           |    Easy    |   🤔   |
 | 0065   | Valid Number                | 129ms         | 98.80%          | 20170628 | insteresting ? isNaN()         | Yes           |    Hard    |   🤔   |
 | 0155   | Min Stack                   | 119ms         | 84.56%          | 20170630 | stack                          | No            |    Easy    |   😃   |
+| 0303   | Range Sum Query - Immutable | 112ms         | 96.92%          | 20170630 | for n[] ++                     | No All        |    Easy    |   😃   |
