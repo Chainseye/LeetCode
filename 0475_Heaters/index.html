@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number[]} houses
+            * @param {number[]} heaters
+            * @return {number}
+            */
+            var houses = [2,4,5,6,13];
+            var heaters = [3, 6];
+            var findRadius = function(houses, heaters) {
+                var cur = 0;
+                var next = 0;
+                var start = 0;
+                var radius = 0;
+                houses.sort((a,b) => a-b);
+                heaters.sort((a,b) => a-b);
+                for(var i = 0; i < houses.length; ++i) {
+                    while(next <= heaters.length - 1 && houses[i] > heaters[next]) {
+                        cur = next;
+                        ++next;
+                    }
+                    if (next > heaters.length - 1) {
+                        next = cur;
+                    }
+                    if (cur === next) {
+                        radius = Math.max(radius, Math.abs(heaters[cur] - houses[i]));
+                    } else {
+                        radius = Math.max(radius, Math.min(heaters[next] - houses[i],houses[i]-heaters[cur]));
+                    }
+                }
+                return radius;
+            };
+            alert(findRadius(houses, heaters));
+        </script>
+    </body>
+</html>

@@ -19,3 +19,6 @@
 | 0065   | Valid Number                | 129ms         | 98.80%          | 20170628 | insteresting ? isNaN()         | Yes           |    Hard    |   🤔   |
 | 0155   | Min Stack                   | 119ms         | 84.56%          | 20170630 | stack                          | No            |    Easy    |   😃   |
 | 0303   | Range Sum Query - Immutable | 112ms         | 96.92%          | 20170630 | for n[] ++                     | No All        |    Easy    |   😃   |
+| 0633   | Sum of Square Numbers       | 116ms         | 80%             | 20170704 | (Math.sqrt(r)) % 1 === 0       | Yes           |    Easy    |   😃   |
+| 0475   | Heaters                     | 175ms         | 88.46%          | 20170704 |                                | No            |    Easy    |   😕   |
+| 0190   | Reverse Bits                | 132ms         | 97.22%          | 20170704 | n.toString(2)                  | No            |    Easy    |   😃   |

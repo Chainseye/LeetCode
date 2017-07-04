@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} c
+            * @return {boolean}
+            */
+            var judgeSquareSum = function(c) {
+                for(var i=0; i*i <= c; ++i){  
+                    var r=c-i*i;  
+                    if((Math.sqrt(r)) % 1 === 0)
+                        return true;
+                }  
+                return false;  
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} n - a positive integer
+            * @return {number} - a positive integer
+            */
+            var number = 16;
+            var reverseBits = function(n) {
+                var s = n.toString(2);
+                var a = s.split("").reverse();
+                var l = a.length;
+                for (var i = 0; i < 32 - l; ++i) {
+                    a.push("0");
+                }
+                return parseInt(a.join(""), 2);
+            };
+            alert(reverseBits(number));
+        </script>
+    </body>
+</html>
