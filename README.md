@@ -29,4 +29,5 @@ https://leetcode.com/problemset/all/
 | 0160   | Intersection of Two Linked Lists      | 122ms         | 100%            | 20170709 |                                | No            |    Easy    |   🙂   |
 | 0014   | Longest Common Prefix                 | 115ms         | 59.75%          | 20170709 |                                | No            |    Easy    |   😃   |
 | 0058   | Length of Last Word                   | 89ms          | 98.86%          | 20170710 | s.trim().split(" ")            | Yes           |    Easy    |   😎   |
+| 0088   | Merge Sorted Array                    | 106ms         | 88.62%          | 20170710 | back to front                  | No            |    Easy    |   😃   |
 
