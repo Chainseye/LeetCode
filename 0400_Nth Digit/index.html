@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} n
+            * @return {number}
+            */
+            var n = 3;
+            var findNthDigit = function(n) {
+                let t = 0, c = 0, m = 0;
+                for (let i = 1; i <= 10; i++) {
+                    t = i;
+                    if (c + i * 9 * 10 ** (i - 1) >= n) break;
+                    c += i * 9 * 10 ** (i - 1);
+                    m += 9 * 10 ** (i - 1);
+                }
+                n -= c;
+                m += Math.ceil(n / t);
+                return parseInt(m.toString()[(n - 1) % t]);
+            };
+            alert(findNthDigit(n));
+        </script>
+    </body>
+</html>

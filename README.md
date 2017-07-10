@@ -23,3 +23,9 @@
 | 0475   | Heaters                               | 175ms         | 88.46%          | 20170704 |                                | No            |    Easy    |   😕   |
 | 0190   | Reverse Bits                          | 132ms         | 97.22%          | 20170704 | n.toString(2)                  | No            |    Easy    |   😃   |
 | 0581   | Shortest Unsorted Continuous Subarray | 149ms         | 73.33%          | 20170704 | Math.max(a, b)                 | Not All       |    Easy    |   🙂   |
+| 0400   | Nth Digit                             | 102ms         | 100%            | 20170709 |                                | No            |    Easy    |   🤔   |
+| 0605   | Can Place Flowers                     | 115ms         | 100%            | 20170709 |                                | Not All       |    Easy    |   🙂   |
+| 0160   | Intersection of Two Linked Lists      | 122ms         | 100%            | 20170709 |                                | No            |    Easy    |   🙂   |
+| 0014   | Longest Common Prefix                 | 115ms         | 59.75%          | 20170709 |                                | No            |    Easy    |   😃   |
+| 0058   | Length of Last Word                   | 89ms          | 98.86%          | 20170710 | s.trim().split(" ")            | Yes           |    Easy    |   😎   |
+
