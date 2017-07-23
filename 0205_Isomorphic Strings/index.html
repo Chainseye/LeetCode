@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {string} s
+            * @param {string} t
+            * @return {boolean}
+            */
+            var isIsomorphic = function(s, t) {
+                let map = {}, set = {};
+                
+                for (let i = 0; i < s.length; i++) {
+                    if (map[s[i]] && map[s[i]] !== t[i]) {
+                        return false;
+                    } else if (!map[s[i]]) {
+                        if (set[t[i]]) {
+                            return false;
+                        }
+                        map[s[i]] = t[i];
+                        set[t[i]] = 1;
+                    }
+                }
+                
+                return true;
+            };
+        </script>
+    </body>
+</html>

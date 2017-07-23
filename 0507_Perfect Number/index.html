@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} num
+            * @return {boolean}
+            */
+            var checkPerfectNumber = function(num) {
+                if(num === 0){
+                    return false; 
+                }
+                var sum = 0;
+                var count = 0; 
+                var primeList = [2,3,5,7,11,13];
+                var perfectNums = [];
+                for(var i=0; i<primeList.length;i++){
+                    var val = primeList[i]; 
+                    var temp = Math.pow(2,val-1) * (Math.pow(2,val)-1);
+                    perfectNums.push(temp); 
+                }
+                while(true){
+                    if(count > perfectNums.length-1){
+                        return false;
+                    }
+                    if(perfectNums[count] === num){
+                        return true;
+                    }
+                    count++; 
+                }
+                
+            };
+        </script>
+    </body>
+</html>

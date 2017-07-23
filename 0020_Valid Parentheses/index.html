@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {string} s
+            * @return {boolean}
+            */
+            var isValid = function(s) {
+                var myStack = [];
+                var result = true;
+                for (var i =0; i < s.length; i++) {
+                    var popped;
+                    switch(s[i]) {
+                        case '{':
+                            myStack.push(s[i]);
+                            break;
+                        case '[':
+                            myStack.push(s[i]);
+                            break;
+                        case '(':
+                            myStack.push(s[i]);
+                            break;
+                        case '}':
+                            popped = myStack.pop();
+                            if (popped !== '{') {
+                                result = false;
+                                return result;
+                            } 
+                            break;
+                        case ']':
+                            popped = myStack.pop();
+                            if (popped !== '[') {
+                                result = false;
+                                return result;
+                            } 
+                            break;
+                        case ')':
+                            popped = myStack.pop();
+                            if (popped !== '(') {
+                                result = false;
+                                return result;
+                            } 
+                            break; 
+                    }
+                }
+                if (myStack.length> 0) {
+                    result = false;
+                } 
+                return result;
+            };
+        </script>
+    </body>
+</html>

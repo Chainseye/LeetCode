@@ -16,8 +16,8 @@ https://leetcode.com/problemset/all/
 | 0204   | Count Primes                          | 249ms         | 85.45%          | 20170624 | how to get primes              | No            |    Easy    |   🤔   |
 | 0069   | Sqrt(x)                               | 122ms         | 100%            | 20170626 | Newton's method                | Not All       |    Easy    |   😃   |
 | 0414   | Third Maximum Number                  | 108ms         | 75.68%          | 20170627 | sort(retutn b-a)               | Yes           |    Easy    |   🙂   |
-| 0028   | Implement strStr()                    | 98ms          | 100%            | 20170628 | insteresting ? indexOf()       | Yes           |    Easy    |   🤔   |
-| 0065   | Valid Number                          | 129ms         | 98.80%          | 20170628 | insteresting ? isNaN()         | Yes           |    Hard    |   🤔   |
+| 0028   | Implement strStr()                    | 98ms          | 100%            | 20170628 | insteresting ? indexOf()       | Yes           |    Easy    |   😉   |
+| 0065   | Valid Number                          | 129ms         | 98.80%          | 20170628 | insteresting ? isNaN()         | Yes           |    Hard    |   😉   |
 | 0155   | Min Stack                             | 119ms         | 84.56%          | 20170630 | stack                          | No            |    Easy    |   😃   |
 | 0303   | Range Sum Query - Immutable           | 112ms         | 96.92%          | 20170630 | for n[] ++                     | No All        |    Easy    |   😃   |
 | 0633   | Sum of Square Numbers                 | 116ms         | 80%             | 20170704 | (Math.sqrt(r)) % 1 === 0       | Yes           |    Easy    |   😃   |
@@ -31,3 +31,14 @@ https://leetcode.com/problemset/all/
 | 0058   | Length of Last Word                   | 89ms          | 98.86%          | 20170710 | s.trim().split(" ")            | Yes           |    Easy    |   😎   |
 | 0088   | Merge Sorted Array                    | 106ms         | 88.62%          | 20170710 | back to front                  | No            |    Easy    |   😃   |
 | 0067   | Add Binary                            | 122ms         | 80%             | 20170716 | `${sum%2}${res}`               | No            |    Easy    |   😃   |
+| 0203   | Remove Linked List Elements           | 135ms         | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0219   | Contains Duplicate II                 | 99ms          | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0234   | Palindrome Linked List                | 99ms          | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0225   | Implement Stack using Queues          | 86ms          | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0290   | Word Pattern                          | 88ms          | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0111   | Minimum Depth of Binary Tree          | 119ms         | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0020   | Valid Parentheses                     | 95ms          | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0205   | Isomorphic Strings                    | 95ms          | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0438   | Find All Anagrams in a String         | 145ms         | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0507   | Perfect Number                        | 106ms         | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
+| 0112   | Path Sum                              | 142ms         | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |

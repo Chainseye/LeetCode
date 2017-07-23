@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {string} s
+            * @param {string} p
+            * @return {number[]}
+            */
+            var findAnagrams = function (s, p) {
+                if (!s || !p || s.length === 0 || p.length === 0 || s.length < p.length) {
+                    return [];
+                }
+
+                var hash = new Array(26);
+                for (var i = 0; i < 26; ++i) {
+                    hash[i] = 0;
+                }
+                for (var i = 0; i < p.length; ++i) {
+                    var index = p.charCodeAt(i) - "a".charCodeAt(0);
+                    hash[index]++;
+                    var index1 = s.charCodeAt(i) - "a".charCodeAt(0);
+                    hash[index1]--;
+                }
+
+                var result = [];
+                var findResult = true;
+                for (var i = 0; i < 26; ++i) {
+                    if (hash[i] !== 0) {
+                        findResult = false;
+                        break;
+                    }
+                }
+                if (findResult) {
+                    result.push(0);
+                }
+
+                for (var i = p.length; i < s.length; ++i) {
+                    var index = s.charCodeAt(i - p.length) - "a".charCodeAt(0);
+                    hash[index]++;
+                    var index1 = s.charCodeAt(i) - "a".charCodeAt(0);
+                    hash[index1]--;
+                    findResult = true;
+                    for (var j = 0; j < 26; ++j) {
+                        if (hash[j] !== 0) {
+                            findResult = false;
+                            break;
+                        }
+                    }
+                    if (findResult) {
+                        result.push(i-p.length+1);
+                    }
+                }
+
+                return result;
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {string} pattern
+            * @param {string} str
+            * @return {boolean}
+            */
+            var wordPattern = function(pattern, str) {
+                let ob = {};
+                let ob2 = {};
+                let arr = str.split(" ");
+                if(arr.length != pattern.length)return false;
+                for(let i = 0; i<pattern.length;i++){
+                    let v1 = arr[i];
+                    let v2 = pattern.charAt(i);
+                    if(ob[v1]==undefined && ob2[v2] == undefined){
+                        ob[v1] = v2;
+                        ob2[v2] = v1;
+                    }else if(ob[v1]&&ob2[v2]){
+                        if(ob[v1] != v2)
+                            return false;
+                    }else{
+                        return false;
+                    }
+                }
+                return true;
+            };
+         </script>
+    </body>
+</html>
