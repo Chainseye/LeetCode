@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <body>  
+        <script>
+            /**
+            * @param {number} n
+            * @return {string}
+            */
+            var countAndSay = function(n) {
+                var r = '1'
+                for (var i=2;i<=n;++i) {
+                    var k = '',s = 1
+                    for (var j=0;j<r.length;++j) {
+                        s = 1
+                        while (j+s<r.length && r[j] === r[j+s]) {
+                            ++s
+                        }
+                        k += s + '' + r[j]
+                        j += --s 
+                    }
+                    r = k
+                }
+                return r
+            };
+        </script>
+    </body>
+</html>
