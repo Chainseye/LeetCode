@@ -44,3 +44,4 @@ https://leetcode.com/problemset/all/
 | 0112   | Path Sum                              | 142ms         | 100%            | 20170723 |                                | No            |    Easy    |   🙂   |
 | 0038   | Count and Say                         | 88ms          | 100%            | 20170724 |                                | No            |    Easy    |   🙂   |
 | 0009   | Palindrome Number                     | 279ms         | 97.55%          | 20170725 |                                | Yes           |    Easy    |   😎   |
+| 0141   | Linked List Cycle                     | 98ms          | 100%            | 20170726 |                                | No            |    Easy    |   🙂   |
